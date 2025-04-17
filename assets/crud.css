@@ -1,0 +1,84 @@
+#saisieTache {
+    width: 300px;
+    display: flex;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+  
+  .todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: crimson;
+    height: 40vh;
+    gap: 1rem;
+  }
+  
+  .toDoContainer {
+    width: auto;
+    height: 50px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.2rem;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+    background-color: #ffffff;
+  }
+  
+  .bouttonMod {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .bouttonMod:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .bouttonMod:active {
+    transform: scale(0.95);
+  }
+  
+  .bouttonDel {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #dc3545; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  .bouttonDel:hover {
+    background-color: #c82333; 
+    transform: scale(1.05);
+  }
+  
+  .bouttonDel:active {
+    background-color: #bd2130; 
+    transform: scale(0.95); 
+  }
+  
+  

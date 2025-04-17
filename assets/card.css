@@ -1,0 +1,27 @@
+.containerCard {
+    justify-content: space-evenly;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: brown;
+  }
+  
+  .card {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 200px;
+    background-color: rgba(91, 95, 95, 0.5);
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 15px;
+    color: azure;
+  }
+  
+  .card h3,
+  .card p {
+  margin: auto;
+  }
