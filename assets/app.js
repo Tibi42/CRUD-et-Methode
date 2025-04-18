@@ -36,8 +36,6 @@ console.log(MonTableauDouble);
 
 // console.log(MonTableau);
 
-
-
 // exo 2 filtrer un tableau pour ne garder que les nombres pairs
 // filtrer un tableau pour ne garder que les nombres impairs
 
@@ -150,3 +148,4 @@ const found2 = MonTableau.reduce((nombre) => {
   return nombre % 3 === 0;
 });
 console.log(found2);
+

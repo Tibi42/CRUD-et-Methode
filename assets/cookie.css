@@ -1,0 +1,52 @@
+.cookie-modal {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 500px;
+  background-color: royalblue;
+  border-radius: 8px;
+  align-items: center;  
+}
+
+.cookie-modal .check{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  gap: 10px;
+}
+.cookie-modal .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;;
+}
+.cookie-modal .acceptBoutton {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cookie-modal .declineBoutton {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cookie-modal .acceptBoutton:hover {
+  background-color: darkblue;
+}
+
+.cookie-modal .declineBoutton:hover {
+  background-color: darkred;
+}
