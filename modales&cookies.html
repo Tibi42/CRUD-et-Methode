@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
+    <title>Bienvenue sur Cook&I</title>
     <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="stylesheet" href="/assets/nav.css">
-    <link rel="stylesheet" href="/assets/card.css">
-    <link rel="stylesheet" href="/assets/crud.css">
-
+    <link rel="stylesheet" href="/assets/modales&cookies.css">
 </head>
-
 <body>
     <nav>
         <ul>
@@ -66,18 +61,45 @@
           </li>
         </ul>
       </nav>
-    <div class="container">
-        <h1>
-            <span>CRUD</span><br /><span>Agir Sur Les Données En JavaScript</span>
-        </h1>
-    </div>
-    <div class="todo">
-        <h2>To-Do List</h2>
-        <input type="text" id="saisieTache" placeholder="Ajouter une tâche">
-        <button id="ajouterTache">Ajouter</button>
-        <ul id="listeTaches"></ul>
-    </div>
-</body>
-<script src="assets/crud.js"></script>
+    <header>
+        <h1>Bienvenue sur Cook&I</h1>
+    </header>
 
+    <main>
+        <p>Bienvenue sur notre site dédié à la cuisine et à l'art culinaire. Nous espérons que vous trouverez ici des recettes et des astuces qui vous inspireront.</p>
+        <p>Veuillez interagir avec les modales pour personnaliser votre expérience.</p>
+
+        <div id="welcome-message" class="hidden">
+            <p>Bonjour, <span id="username"></span> ! Nous sommes ravis de vous accueillir.</p>
+        </div>
+    </main>
+
+    <!-- Modale de consentement des cookies -->
+    <div id="cookie-consent-modal" class="modal-container">
+        <p>Ce site utilise des cookies pour améliorer votre expérience. Acceptez-vous les cookies ?</p>
+        <button id="accept-cookies">Accepter</button>
+        <button id="decline-cookies">Refuser</button>
+    </div>
+
+    <!-- Modale d'avertissement après refus -->
+    <div id="cookie-warning-modal" class="modal-container hidden">
+        <p>Vous avez refusé les cookies. Certaines fonctionnalités pourraient être limitées.</p>
+        <button id="close-warning">Fermer</button>
+    </div>
+
+    <!-- Modale de saisie du nom d'utilisateur -->
+    <div id="username-modal" class="modal-container hidden">
+        <p>Veuillez entrer votre nom pour une expérience personnalisée :</p>
+        <input type="text" id="username-input" placeholder="Votre nom">
+        <button id="submit-username">Valider</button>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <footer>
+        <p>&copy; 2025 Cook&I. Tous droits réservés.</p>
+    </footer>
+    <script src="/assets/modales&cookies.js"></script>
+</body>
 </html>

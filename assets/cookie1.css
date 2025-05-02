@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #ff6347; /* Tomate */
+    --secondary-color: #b7b7b7; /* Gris foncé */
+    --background: linear-gradient(
+      to right,
+      #6c49a5,
+      #351dac
+    ); /* Dégradé de pêche */
+    --text-color: #000; /* Noir */
+    --footer-color: #6a49d6; /* Gris moyen */
+  }
+
+  body {
+    background: var(
+      --background
+    ); /* Utilisation de la propriété background */
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  p {
+    color: var(--secondary-color);
+    text-align: center;
+    margin: 10px 0;
+  }
+
+  footer {
+    background: var(--footer-color);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+
+  /* Styles pour les modales */
+  .modal-container {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+  }
+
+  /* Styles pour les boutons */
+  button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  button:hover {
+    background-color: #e5533d; /* Couleur légèrement plus foncée au survol */
+  }
+
+  /* Styles pour les champs de formulaire */
+  input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  /* Classe .hidden pour masquer les éléments */
+  .hidden {
+    display: none !important;
+  }
+
+  /* Style pour le message de bienvenue */
+  #welcomeMessage {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 400px;
+  }

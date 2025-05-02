@@ -83,22 +83,22 @@ document.addEventListener("DOMContentLoaded", () => {
     checkbox2.dispatchEvent(new Event("change"));
   });
 
-  checkbox1.addEventListener("change", () => {
-    if (checkbox1.checked) {
-      console.log("Checkbox 1 activée : Permets l'analyse des cookies");
-    } else {
-      console.log("Checkbox 1 désactivée : Analyse des cookies non permise");
-    }
-  });
+  // checkbox1.addEventListener("change", () => {
+  //   if (checkbox1.checked) {
+  //     console.log("Checkbox 1 activée : Permets l'analyse des cookies");
+  //   } else {
+  //     console.log("Checkbox 1 désactivée : Analyse des cookies non permise");
+  //   }
+  // });
 
-  checkbox2.addEventListener("change", () => {
-    if (checkbox2.checked && label2.onclick) {
-      console.log("Checkbox 2 activée : Autorise les cookies fonctionnels");
-    } else {
-      console.log("Checkbox 2 désactivée : Cookies fonctionnels non autorisés");
-    }
-  });
+  // checkbox2.addEventListener("change", () => {
+  //   if (checkbox2.checked && label2.onclick) {
+  //     console.log("Checkbox 2 activée : Autorise les cookies fonctionnels");
+  //   } else {
+  //     console.log("Checkbox 2 désactivée : Cookies fonctionnels non autorisés");
+  //   }
+  // });
   // checkbox1.checked = checkbox1.checked
-  //   ? alert
+  //   ? alertl
   //   : "Je suis checked" || "je ne suis pas checked";
 });

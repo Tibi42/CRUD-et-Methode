@@ -2,14 +2,13 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRUD</title>
-    <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="stylesheet" href="/assets/nav.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
     <link rel="stylesheet" href="/assets/card.css">
-    <link rel="stylesheet" href="/assets/crud.css">
-
+    <link rel="stylesheet" href="/assets/nav.css">
+    <link rel="stylesheet" href="/assets/modal.css">
+    <title>Modales</title>
 </head>
 
 <body>
@@ -66,18 +65,32 @@
           </li>
         </ul>
       </nav>
-    <div class="container">
-        <h1>
-            <span>CRUD</span><br /><span>Agir Sur Les Données En JavaScript</span>
-        </h1>
+    <div class="hero">
+        <h1>Bienvenue sur les Modaldes</h1>
     </div>
-    <div class="todo">
-        <h2>To-Do List</h2>
-        <input type="text" id="saisieTache" placeholder="Ajouter une tâche">
-        <button id="ajouterTache">Ajouter</button>
-        <ul id="listeTaches"></ul>
+    <div class="containerCard">
+        <div class="card">
+            <h3>Tout sur les Modales !</h3>
+            <p>Une modale est une fenêtre contextuelle qui apparaît au-dessus du contenu principal d'une application ou
+                d'un site web. Elle est utilisée pour attirer l'attention de l'utilisateur sur une tâche ou une
+                interaction spécifique, en bloquant temporairement l'interaction avec le reste de l'interface.</p>
+            <button id="openModal">Ouvrir la Modale</button>
+        </div>
     </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Modale</h2>
+            <p>Ceci est une modale. Vous pouvez y ajouter du contenu personnalisé.</p>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2025 Modale. Tous droits réservés.</p>
+    </footer>
+    <script src="/assets/modale.js"></script>
 </body>
-<script src="assets/crud.js"></script>
 
 </html>

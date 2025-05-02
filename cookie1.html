@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <link rel="stylesheet" href="/assets/cookie1.css">
+    <title>Cookie</title>
+  </head>
+  <body>
+    <h1>Bienvenue sur Cook&I</h1>
+    <p>Votre solution unique pour tous vos besoins culinaires !</p>
+    <p>Découvrez nos recettes, astuces et bien plus encore.</p>
+
+    <!-- Message de bienvenue personnalisé -->
+    <div id="welcomeMessage">
+      <p>Bienvenue, <span id="userName"></span> !</p>
+    </div>
+
+    <!-- Modale de consentement des cookies -->
+    <div id="cookieConsentModal" class="modal-container">
+      <div class="modal-content">
+        <p>Nous utilisons des cookies pour améliorer votre expérience. Acceptez-vous ?</p>
+        <button id="acceptCookies">Accepter</button>
+        <button id="declineCookies">Refuser</button>
+      </div>
+    </div>
+
+    <!-- Modale d'avertissement après refus -->
+    <div id="cookieWarningModal" class="modal-container">
+      <div class="modal-content">
+        <p>Vous avez refusé les cookies. Certaines fonctionnalités pourraient être limitées.</p>
+        <button id="closeWarning">Fermer</button>
+      </div>
+    </div>
+
+    <!-- Modale de saisie du nom d'utilisateur -->
+    <div id="userNameModal" class="modal-container">
+      <div class="modal-content">
+        <p>Veuillez entrer votre nom pour une expérience personnalisée :</p>
+        <input type="text" id="userNameInput" placeholder="Votre nom" />
+        <button id="saveUserName">Enregistrer</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Cook&I. Tous droits réservés.</p>
+    </footer>
+    <script src="/assets/cookie1.js"></script>
+  </body>
+</html>
