@@ -1,74 +1,234 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manipuler les tableaux en JavaScript</title>
-    <link rel="stylesheet" href="/assets/styles.css">
-    <link rel="stylesheet" href="/assets/card.css">
-    <link rel="stylesheet" href="/assets/nav.css">
-    <link rel="stylesheet" href="/assets/cookie.css">
-</head>
-
-<body>
-    <nav>
-        <ul>
-            <li>
-                <a href="/index.html">Home</a>
-            </li>
-            <li>
-                <a href="/crud.html">CRUD</a>
-            </li>
-            <li><a href="/modale.html">Modale</a></li>
-            <li>
-                <a href="/cookie.html">Cookie</a>
-            </li>
-            <li>
-                <a href="/api.html">API</a>
-            </li>
-            <li>
-                <a href="/aide.html">Aide</a>
-            </li>
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/modal.css">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    <title>Cookie - Gestion du consentement</title>
+  </head>
+  <body>
+       <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="active" title="Accueil">
+            <!-- icon fontawsome home -->
+            <i class="fas fa-home"></i>
+          </a>
+        </li>
+        <!-- crud -->
+        <li>
+          <a href="/arraystips.html" title="Tips Tableau">
+            <!-- icon fontawsome grid -->
+            <i class="fas fa-th"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/crud.html" title="CRUD">
+            <!-- icon fa function -->
+            <i class="fas fa-cogs"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/modal.html" title="Modal">
+            <!-- icon fa modal -->
+            <i class="fas fa-window-restore"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/cookie.html" title="Cookie">
+            <!-- icon fa cookie -->
+            <i class="fas fa-cookie"></i
+          ></a>
+        </li>
+        <li>
+          <a href="/cookiestips.html" title="CookieTips">
+            <!-- icon fa tips -->
+            <i class="fas fa-cookie-bite"></i
+          ></a>
+        </li>
+        <li>
+          <a href="api.html" title="API">
+            <!-- icon fa api -->
+            <i class="fas fa-plug"></i
+          ></a>
+        </li>
+        <li>
+          <a href="aide.html" title="Aide">
+            <!-- icon fa help -->
+            <i class="fas fa-question-circle"></i
+          ></a>
+        </li>
+      </ul>
     </nav>
-    <main>
-        <div class="hero">
-            <h1><br>Manipuler les tableaux <br>les donneée de Tableaux en JavaScript</br></h1>
+    <!-- Contenu principal de la page -->
+    <h1>Bienvenue sur Cook&I</h1>
+    
+    <!-- Message de bienvenue qui sera mis à jour avec le nom de l'utilisateur -->
+    <div class="welcome-message hidden" id="welcomeMessage">
+      <h2 id="personalWelcome">Bienvenue !</h2>
+    </div>
+    
+    <p>Votre solution unique pour tous vos besoins culinaires !</p>
+    <p>Découvrez nos recettes, astuces et bien plus encore.</p>
+    
+    <!-- Modale de consentement des cookies -->
+    <div class="modal-container" id="cookieConsentModal">
+      <div class="modal">
+        <h2>Gestion des cookies</h2>
+        <p>Ce site utilise des cookies pour améliorer votre expérience. Acceptez-vous l'utilisation de cookies ?</p>
+        <div class="modal-buttons">
+          <button class="secondary" id="rejectCookies">Refuser</button>
+          <button id="acceptCookies">Accepter</button>
         </div>
-        <div class="containerCard">
-            <div class="card">
-                <h3>MAP</h3>
-                <p>Mon tableau de sortie est different mais il fait la même longueur que le tableau d'entrée.</p>
-            </div>
-            <div class="card">
-                <h3>Filter</h3>
-                <p>Mon tableau de sortie est different mais plus court que le tableau d'entrée.</p>
-            </div>
-            <div class="card">
-                <h3>Reduce</h3>
-                <p>Mon tableau de sortie est un seul élément, il n'a pas la même longueur que le tableau d'entrée.</p>
-            </div>
+      </div>
+    </div>
+    
+    <!-- Modale d'avertissement après refus -->
+    <div class="modal-container hidden" id="warningModal">
+      <div class="modal">
+        <h2>Attention</h2>
+        <p>Le site pourrait rencontrer des dysfonctionnements sans l'utilisation de cookies.</p>
+        <div class="modal-buttons">
+          <button id="closeWarning">Compris</button>
         </div>
-        <!-- <div class="containerCard">
-            <div class="card">
-                <h3>sous-titre card</h3>
-                <p>Paragraphe card</p>
-            </div>
-            <div class="card">
-                <h3>sous-titre card</h3>
-                <p>Paragraphe card</p>
-            </div>
-            <div class="card">
-                <h3>sous-titre card</h3>
-                <p>Paragraphe card</p>
-            </div>
-        </div> -->
-    </main>
+      </div>
+    </div>
+    
+    <!-- Modale pour saisir le nom d'utilisateur -->
+    <div class="modal-container hidden" id="usernameModal">
+      <div class="modal">
+        <h2>Personnalisation</h2>
+        <p>Veuillez entrer votre nom pour personnaliser votre expérience :</p>
+        <input type="text" id="usernameInput" placeholder="Votre nom">
+        <div class="modal-buttons">
+          <button class="secondary" id="cancelUsername">Annuler</button>
+          <button id="saveUsername">OK</button>
+        </div>
+      </div>
+    </div>
+    
     <footer>
-        <p>&copy; Reservée</p>
+      <p>&copy; 2025 Cook&I. Tous droits réservés.</p>
     </footer>
-    <!-- <script src="/assets/app.js"></script> -->
-    <script src="/assets/cookie.js"></script>
-</body>
-
+    
+    <script>
+      // Attendre que le document soit complètement chargé
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // Récupération des éléments DOM pour les modales
+        const cookieConsentModal = document.getElementById('cookieConsentModal');
+        const warningModal = document.getElementById('warningModal');
+        const usernameModal = document.getElementById('usernameModal');
+        const welcomeMessage = document.getElementById('welcomeMessage');
+        const personalWelcome = document.getElementById('personalWelcome');
+        
+        // Récupération des boutons
+        const acceptCookiesBtn = document.getElementById('acceptCookies');
+        const rejectCookiesBtn = document.getElementById('rejectCookies');
+        const closeWarningBtn = document.getElementById('closeWarning');
+        const cancelUsernameBtn = document.getElementById('cancelUsername');
+        const saveUsernameBtn = document.getElementById('saveUsername');
+        
+        // Récupération du champ de saisie du nom
+        const usernameInput = document.getElementById('usernameInput');
+        
+        // Fonction pour créer un cookie
+        function setCookie(name, value) {
+          // Création du cookie sans date d'expiration (session cookie)
+          document.cookie = `${name}=${value};path=/`;
+        }
+        
+        // Fonction pour lire un cookie par son nom
+        function getCookie(name) {
+          // Préparer le nom du cookie à rechercher
+          const cookieName = `${name}=`;
+          // Diviser tous les cookies en un tableau
+          const cookies = document.cookie.split(';');
+          
+          // Parcourir tous les cookies
+          for (let i = 0; i < cookies.length; i++) {
+            // Récupérer le cookie courant
+            let cookie = cookies[i];
+            // Supprimer les espaces au début
+            while (cookie.charAt(0) === ' ') {
+              cookie = cookie.substring(1);
+            }
+            // Si le cookie commence par le nom recherché
+            if (cookie.indexOf(cookieName) === 0) {
+              // Retourner la valeur du cookie
+              return cookie.substring(cookieName.length, cookie.length);
+            }
+          }
+          // Si le cookie n'est pas trouvé, retourner une chaîne vide
+          return "";
+        }
+        
+        // Vérifier si l'utilisateur a déjà un cookie de nom
+        const username = getCookie('username');
+        if (username) {
+          // Si oui, afficher le message de bienvenue personnalisé
+          personalWelcome.textContent = `Bienvenue ${username} !`;
+          welcomeMessage.classList.remove('hidden');
+          // Cacher la modale de consentement
+          cookieConsentModal.classList.add('hidden');
+        }
+        
+        // Gestion du bouton "Accepter" les cookies
+        acceptCookiesBtn.addEventListener('click', function() {
+          // Cacher la modale de consentement
+          cookieConsentModal.classList.add('hidden');
+          // Afficher la modale de saisie du nom
+          usernameModal.classList.remove('hidden');
+        });
+        
+        // Gestion du bouton "Refuser" les cookies
+        rejectCookiesBtn.addEventListener('click', function() {
+          // Cacher la modale de consentement
+          cookieConsentModal.classList.add('hidden');
+          // Afficher la modale d'avertissement
+          warningModal.classList.remove('hidden');
+        });
+        
+        // Gestion du bouton "Compris" dans la modale d'avertissement
+        closeWarningBtn.addEventListener('click', function() {
+          // Cacher la modale d'avertissement
+          warningModal.classList.add('hidden');
+        });
+        
+        // Gestion du bouton "Annuler" dans la modale de saisie du nom
+        cancelUsernameBtn.addEventListener('click', function() {
+          // Cacher la modale de saisie du nom
+          usernameModal.classList.add('hidden');
+          // Réafficher la modale de consentement
+          cookieConsentModal.classList.remove('hidden');
+        });
+        
+        // Gestion du bouton "OK" dans la modale de saisie du nom
+        saveUsernameBtn.addEventListener('click', function() {
+          // Récupérer la valeur du champ de saisie
+          const name = usernameInput.value.trim();
+          
+          // Vérifier que le nom n'est pas vide
+          if (name !== '') {
+            // Créer un cookie avec le nom saisi
+            setCookie('username', name);
+            
+            // Mettre à jour le message de bienvenue
+            personalWelcome.textContent = `Bienvenue ${name} !`;
+            welcomeMessage.classList.remove('hidden');
+            
+            // Cacher la modale de saisie du nom
+            usernameModal.classList.add('hidden');
+          } else {
+            // Si le nom est vide, afficher une alerte
+            alert('Veuillez entrer votre nom.');
+          }
+        });
+      });
+    </script>
+  </body>
 </html>
